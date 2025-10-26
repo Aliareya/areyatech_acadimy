@@ -1,8 +1,11 @@
-import React from 'react'
+import MainLayout from './layouts/MainLayout';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
-    <div className="text-6xl">App</div>
+    <ThemeProvider>
+      <MainLayout/>
+    </ThemeProvider>
   )
 }
 
