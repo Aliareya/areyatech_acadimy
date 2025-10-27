@@ -22,14 +22,14 @@ function Topbar() {
             )
         }
         <div className="h-16 flex flex-col justify-center pl-5">
-          <span className="text-lg font-semibold">Areya 
+          <span className="text-lg font-semibold italic">Areya 
             <span className="text-yellow-900 italic">Tech</span> Management</span>
           <span className="text-sm font-semibold">{formatted}</span>
         </div>
 
       </div>
-      <div className="w-1/2 flex justify-end items-center h-16 px-5 gap-3">
-        <span className="w-4 p-0.5 h-4 absolute right-[63px] top-2 text-sm flex justify-center items-center text-white font-bold rounded-full bg-[#006666]">2</span>
+      <div className="w-1/2 flex justify-end items-center h-16 px-5 gap-5">
+        <span className="w-4 p-0.5 h-4 absolute right-[69px] top-2 text-sm flex justify-center items-center text-white font-bold rounded-full bg-[#006666]">2</span>
         <Icon icon="ic:outline-notifications" width="30" height="30"  style={{color: '#006666'}} />
         <Icon icon="ix:user-profile-filled" width="35" height="35"  style={{color: '#006666'}} />
       </div>
