@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 
-function DashoardCart({item}) {
+function StatusCart({item}) {
   return (
     <div className="w-1/4 hover:shadow-lg h-auto bg-[#d1e2e2] border p-6 border-gray-400/30 rounded-lg">
       <div className="w-full flex justify-between pb-2 ">
@@ -23,4 +23,4 @@ function DashoardCart({item}) {
   );
 }
 
-export default DashoardCart;
+export default StatusCart;

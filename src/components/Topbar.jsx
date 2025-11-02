@@ -10,7 +10,7 @@ function Topbar() {
   return (
     <div class="w-full flex h-16 bg-[#d1e2e2]  ">
       <div className="w-1/2  h-16 flex justify-start items-center px-1">
-        {isSidebarOpen ? 
+        {/* {isSidebarOpen ? 
            (
             <Icon icon="ic:round-menu-open" className="cursor-pointer"
               onClick={toggleSidebar}
@@ -20,7 +20,7 @@ function Topbar() {
                 onClick={toggleSidebar}
                 width="32" height="32" style={{ color: '#006666' }} />
             )
-        }
+        } */}
         <div className="h-16 flex flex-col justify-center pl-5">
           <span className="text-lg font-semibold italic">Areya 
             <span className="text-yellow-900 italic">Tech</span> Management</span>
