@@ -8,9 +8,16 @@ export const ThemeProvider = ({children})=> {
   const toggleSidebar = ()=>{
       setIsSidebarOpen(!isSidebarOpen); 
   }
+
+  const [isopenPupop , setIsopenPupop] = useState(false);
+
+  const handleTogglePupop = () =>{
+    setIsopenPupop(!isopenPupop);
+
+  }
   
   return(
-    <ThemeContext.Provider value={{ isSidebarOpen , setIsSidebarOpen , toggleSidebar }}>
+    <ThemeContext.Provider value={{ isSidebarOpen , setIsSidebarOpen , toggleSidebar  , isopenPupop , setIsopenPupop , handleTogglePupop}}>
         {children}
     </ThemeContext.Provider>
   )

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ContentDashboardHeader from "../../components/ContentDashboardHeader";
 import { useStateData } from "../../context/StaticDataContext";
 import StudentCart from "../../components/cart/StudentCart";
@@ -6,6 +6,17 @@ import Searchcomponent from "../../components/ui/Searchcomponent";
 
 function Students() {
   const { studentStatusStats } = useStateData();
+  const [openId, setOpenId] = useState(null); // State مرکزی برای Popup
+
+  const student = [
+    { name: "John Doe", status: "Active", email: "john.doe@email.com", id: "STU001", course: "Computer Science", year: "2nd Year" },
+    { name: "Alireza", status: "Active", email: "john.doe@email.com", id: "STU002", course: "Computer Science", year: "2nd Year" },
+    { name: "Alireza", status: "Active", email: "john.doe@email.com", id: "STU002", course: "Computer Science", year: "2nd Year" },
+    { name: "Alireza", status: "Active", email: "john.doe@email.com", id: "STU002", course: "Computer Science", year: "2nd Year" },
+    { name: "Alireza", status: "Active", email: "john.doe@email.com", id: "STU002", course: "Computer Science", year: "2nd Year" }
+  ];
+
+
   return (
     <div>
       <ContentDashboardHeader
@@ -24,13 +35,17 @@ function Students() {
             </p>
           </div>
 
-          <div className=" rounded-xl shadow-sm border border-gray-400/30 p-6">
-            <Searchcomponent/>
+          <div className="rounded-xl shadow-sm border border-gray-400/30 p-6">
+            <Searchcomponent />
             <div className="space-y-4">
-              <StudentCart/>
-              <StudentCart/>
-              <StudentCart/>
-              <StudentCart/>
+              {student.map((item) => (
+                <StudentCart
+                  key={item.id}
+                  student={item}
+                  openId={openId}
+                  setOpenId={setOpenId} 
+                />
+              ))}
             </div>
           </div>
         </div>

@@ -12,12 +12,14 @@ import AddStudent from "../pages/addstudent/AddStudent";
 import Roles from "../pages/roles/Roles";
 import Setting from "../pages/settings/Settings";
 import AddTeacher from "../pages/addteacher/AddTeacher";
+import InfoPupop from "../components/pupop/InfoPupop";
 
 function MainLayout() {
-  const { isSidebarOpen } = useTheme();
+  const { isSidebarOpen ,handleTogglePupop , isopenPupop} = useTheme();
 
   return (
     <div className="flex">
+      {isopenPupop && <InfoPupop onClose={handleTogglePupop}/>}
       <div
         className={`${
           isSidebarOpen ? "w-60" : "w-0"
